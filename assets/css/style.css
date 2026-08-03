@@ -46,7 +46,9 @@ button, input, textarea, select { font: inherit; }
 .btn-principal { border: 1px solid var(--verde); background: var(--verde); color: #071015; }
 .btn-principal:hover, .btn-principal:focus { border-color: var(--verde-claro); background: var(--verde-claro); color: #071015; }
 .hero-proof { position: absolute; right: 0; bottom: 0; left: 0; z-index: 2; border-top: 1px solid var(--linea); background: rgba(6,8,6,.55); backdrop-filter: blur(10px); }
-.hero-proof .container { max-width: 1240px; display: flex; justify-content: space-between; gap: 1rem; padding-block: 1rem; color: #c6cbc4; font-size: .72rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+.hero-proof .container { max-width: 1240px; display: flex; align-items: center; gap: .85rem; padding-block: 1rem; color: #d8ddd6; }
+.hero-proof i { flex: 0 0 auto; color: var(--verde-claro); font-size: 1.15rem; }
+.hero-proof p { max-width: 940px; margin: 0; font-size: .78rem; font-weight: 500; line-height: 1.5; }
 
 .section-intro, .section-block, .process-section, .case-section, .deliverables-section, .faq-section, .portfolio-cta, .contact-section { padding: 105px 0; }
 .section-intro { background: var(--blanco); color: #131713; }
@@ -200,8 +202,8 @@ footer { padding: 70px 0 25px; border-top: 1px solid var(--linea); background: #
   .hero-content { padding-top: 110px; }
   .hero h1 { font-size: clamp(3.15rem, 15vw, 5.2rem); }
   .hero-actions .btn { width: 100%; }
-  .hero-proof .container { display: grid; justify-content: start; gap: .3rem; }
-  .hero-proof span:nth-child(3) { display: none; }
+  .hero-proof .container { align-items: flex-start; }
+  .hero-proof p { font-size: .7rem; }
   .problem-image img { min-height: 360px; }
   .image-note { right: 12px; left: 12px; bottom: 12px; }
   .advice-banner { grid-template-columns: 1fr; }
@@ -232,4 +234,3 @@ footer { padding: 70px 0 25px; border-top: 1px solid var(--linea); background: #
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
-
