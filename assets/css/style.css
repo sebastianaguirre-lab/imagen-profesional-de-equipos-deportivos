@@ -92,6 +92,9 @@ h2 { margin: 0; font: 800 clamp(2.5rem, 5vw, 4.7rem)/.98 "Barlow Condensed", san
 .case-carousel { border: 1px solid var(--linea); border-radius: var(--radio); overflow: hidden; background: var(--negro-suave); }
 .case-slide { min-height: 560px; display: grid; grid-template-columns: 1.4fr .6fr; }
 .case-slide img { width: 100%; height: 560px; object-fit: cover; object-position: top; }
+.case-browser-preview { min-width: 0; margin: 0; overflow: hidden; border-right: 1px solid var(--linea); background: #080a08; }
+.case-browser-preview .portfolio-browser__bar { min-height: 42px; }
+.case-browser-preview img { display: block; height: 518px; }
 .case-slide > div { display: flex; flex-direction: column; justify-content: center; padding: 3rem; }
 .case-slide span { color: var(--verde); font-size: .7rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
 .case-slide h3 { margin: .75rem 0 1rem; font: 800 2.4rem/1 "Barlow Condensed", sans-serif; text-transform: uppercase; }
@@ -185,6 +188,8 @@ footer { padding: 70px 0 25px; border-top: 1px solid var(--linea); background: #
   .process-timeline h3 { margin-top: .25rem; }
   .case-slide { grid-template-columns: 1fr; }
   .case-slide img { height: 430px; }
+  .case-browser-preview { border-right: 0; border-bottom: 1px solid var(--linea); }
+  .case-browser-preview img { height: 388px; }
   .case-slide > div { padding: 2rem 2rem 4rem; }
   .contact-panel { padding: 2rem; }
 }
@@ -201,6 +206,7 @@ footer { padding: 70px 0 25px; border-top: 1px solid var(--linea); background: #
   .image-note { right: 12px; left: 12px; bottom: 12px; }
   .advice-banner { grid-template-columns: 1fr; }
   .case-slide img { height: 330px; }
+  .case-browser-preview img { height: 288px; }
   .case-results { grid-template-columns: 1fr; }
   .case-results div { border-right: 0; border-bottom: 1px solid var(--linea); }
   .deliverables-list, .field-row, .footer-grid { grid-template-columns: 1fr; }
@@ -215,6 +221,7 @@ footer { padding: 70px 0 25px; border-top: 1px solid var(--linea); background: #
   h2 { font-size: 2.5rem; }
   .service-card { min-height: 0; }
   .case-slide img { height: 260px; }
+  .case-browser-preview img { height: 218px; }
   .case-slide > div { padding: 1.5rem 1.5rem 4rem; }
   .case-slide h3 { font-size: 2rem; }
   .contact-panel { padding: 1.25rem; }
