@@ -26,8 +26,10 @@ button, input, textarea, select { font: inherit; }
 .nav-shell { max-width: 1240px; }
 .navbar-brand { display: inline-flex; align-items: center; gap: .55rem; color: var(--blanco); font-family: "Barlow Condensed", sans-serif; font-size: 1.45rem; font-weight: 600; letter-spacing: .02em; text-transform: uppercase; }
 .navbar-brand:hover, .navbar-brand:focus { color: var(--blanco); }
-.navbar-brand strong { color: var(--verde); }
-.brand-mark { display: inline-grid; width: 32px; height: 32px; place-items: center; border-radius: 50%; background: var(--verde); color: #071015; font-size: .85rem; }
+.navbar-brand strong, .brand-accent { color: var(--verde); }
+.brand-mark { display: inline-flex; align-items: center; justify-content: center; gap: 1px; min-width: 47px; height: 32px; padding: 0 5px; border: 1px solid rgba(77,226,255,.45); border-radius: 8px; background: #071015; font-size: .88rem; letter-spacing: -.04em; }
+.brand-mark b { color: var(--verde); font-size: 1.05em; font-weight: 800; }
+.brand-mark span { color: var(--blanco); font-weight: 800; }
 .navbar .nav-link { margin: 0 .18rem; color: rgba(255,255,255,.74); font-size: .79rem; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; }
 .navbar .nav-link:hover, .navbar .nav-link:focus, .navbar .nav-link.active { color: var(--verde-claro); }
 .navbar .nav-cta { padding: .58rem 1rem !important; border: 1px solid var(--verde); border-radius: 999px; color: var(--blanco); }
@@ -218,7 +220,7 @@ footer { padding: 70px 0 25px; border-top: 1px solid var(--linea); background: #
 
 @media (max-width: 575.98px) {
   .navbar-brand { font-size: 1.12rem; }
-  .brand-mark { width: 28px; height: 28px; }
+  .brand-mark { min-width: 43px; height: 28px; }
   .hero-subtitle { font-size: .98rem; }
   h2 { font-size: 2.5rem; }
   .service-card { min-height: 0; }
