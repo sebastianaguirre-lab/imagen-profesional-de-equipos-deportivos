@@ -1,0 +1,27 @@
+PWD c:/Users/Sebastian/OneDrive/Documentos/My Frontends/servicios ofrecidos/cotizaciones
+INPUT c:/texlive/2026/texmf.cnf
+INPUT c:/texlive/2026/texmf-dist/web2c/texmf.cnf
+INPUT c:/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT c:/Users/Sebastian/OneDrive/Documentos/My Frontends/servicios ofrecidos/cotizaciones/cotizacion-js-sport.tex
+OUTPUT cotizacion-js-sport.log
+INPUT c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
+INPUT c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
+INPUT c:/texlive/2026/texmf-dist/tex/latex/base/size10.clo
+INPUT c:/texlive/2026/texmf-dist/tex/latex/base/size10.clo
+INPUT c:/texlive/2026/texmf-dist/tex/latex/base/size10.clo
+INPUT c:/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT c:/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT c:/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT c:/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT c:/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT c:/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def

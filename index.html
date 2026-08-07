@@ -61,12 +61,18 @@
     </nav>
 
     <header id="inicio" class="hero">
-      <img
-        src="assets/img/hero-deportivo.jpeg"
-        class="hero-img"
-        alt="Equipo de ciclismo avanzando unido en la ruta"
-        fetchpriority="high"
-      />
+      <picture>
+        <source
+          media="(max-width: 767.98px)"
+          srcset="assets/img/para collage/collage-portada-celular.jpg"
+        />
+        <img
+          src="assets/img/hero-deportivo.jpeg"
+          class="hero-img"
+          alt="Deportistas en acción"
+          fetchpriority="high"
+        />
+      </picture>
       <div class="hero-overlay"></div>
       <div class="container hero-content">
         <p class="eyebrow">Imagen profesional para organizaciones deportivas</p>
@@ -103,8 +109,8 @@
             <div class="col-lg-6">
               <div class="problem-image">
                 <img
-                  src="assets/img/equipo-rocky.jpeg"
-                  alt="Integrantes de Team Rocky reunidos"
+                  src="assets/img/el problema.jpg"
+                  alt="Ciclista compitiendo en una carrera urbana"
                   loading="lazy"
                 />
                 <div class="image-note">
@@ -336,59 +342,19 @@
         </div>
       </section>
 
-      <section class="portfolio-cta" aria-labelledby="portfolio-title">
-        <div class="container">
-          <div class="portfolio-cta__inner">
-            <div class="portfolio-cta__copy">
-              <p class="section-kicker">
-                <i class="fa-solid fa-code" aria-hidden="true"></i>
-                Diseño y desarrollo web
-              </p>
-              <h2 id="portfolio-title">Experiencia más allá del deporte</h2>
-              <p>
-                Conoce otros proyectos web desarrollados por
-                <strong>Sebastián</strong>, responsable del diseño y
-                desarrollo digital de este servicio.
-              </p>
-              <p>
-                Desde plataformas educativas hasta sitios corporativos e
-                interactivos, cada proyecto combina identidad visual, contenido
-                claro y una experiencia adaptable a cualquier dispositivo.
-              </p>
-              <a
-                href="https://sebastianaguirre-lab.github.io/Portafolio/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-portfolio"
-              >
-                Explorar otros proyectos
-                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-              </a>
-            </div>
 
-            <div class="portfolio-browser" aria-label="Vista previa del portafolio de Sebastián Aguirre">
-              <div class="portfolio-browser__bar" aria-hidden="true">
-                <span></span><span></span><span></span>
-                <div>sebastianaguirre-lab.github.io/Portafolio</div>
-              </div>
-              <a
-                href="https://sebastianaguirre-lab.github.io/Portafolio/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="portfolio-browser__link"
-                aria-label="Abrir el portafolio de Sebastián Aguirre"
-              >
-                <img
-                  src="assets/img/portafolio-preview.png"
-                  alt="Vista previa del portafolio web de Sebastián Aguirre"
-                  loading="lazy"
-                />
-              </a>
-            </div>
+      <section class="pricing-section" aria-labelledby="pricing-title">
+        <div class="container">
+          <div class="pricing-content">
+            <p class="section-kicker">Inversión inicial</p>
+            <h2 id="pricing-title">Proyectos desde <span>$500.000</span></h2>
+            <p>
+              Cada equipo tiene necesidades distintas. El alcance y valor del proyecto se define según los servicios requeridos: sitio web, identidad visual, dossier de patrocinio, fotografía, contenido y soporte.
+            </p>
+            <a href="#contacto" class="btn btn-principal">Cotiza tu proyecto <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
           </div>
         </div>
       </section>
-
       <section id="contacto" class="contact-section">
         <div class="container">
           <div class="contact-panel">
@@ -424,7 +390,7 @@
         <div><strong>Explorar</strong><a href="#servicios">Servicios</a><a href="#proceso">Proceso</a><a href="#casos">Caso real</a></div>
         <div><strong>Contacto</strong><a href="#contacto">Coordinar reunión</a><a href="#preguntas">Preguntas frecuentes</a></div>
       </div>
-      <div class="container footer-bottom"><span>© <span id="year"></span> JS <strong class="brand-accent">Sport</strong></span><a href="#inicio">Volver arriba <i class="fa-solid fa-arrow-up"></i></a></div>
+      <div class="container footer-bottom"><span>© <span id="year"></span> JS <strong class="brand-accent">Sport</strong> · Todos los derechos reservados</span><span class="footer-credit">Diseño y desarrollo web por <a href="https://sebastianaguirre-lab.github.io/Portafolio/" target="_blank" rel="noopener noreferrer"><strong>Sebastián Aguirre · Portafolio ↗</strong></a></span></div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

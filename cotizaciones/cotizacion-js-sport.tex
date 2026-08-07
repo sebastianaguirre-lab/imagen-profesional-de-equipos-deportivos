@@ -1,0 +1,355 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=0mm]{geometry}
+\usepackage{fontspec}
+\usepackage[spanish]{babel}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{ragged2e}
+\usepackage{lastpage}
+\usepackage{hyperref}
+\usepackage{microtype}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\definecolor{Navy}{HTML}{080A08}
+\definecolor{NavyTwo}{HTML}{111411}
+\definecolor{Lime}{HTML}{4DE2FF}
+\definecolor{Ink}{HTML}{171B17}
+\definecolor{Slate}{HTML}{687069}
+\definecolor{Mist}{HTML}{F0F3F1}
+\definecolor{Line}{HTML}{D8DEDA}
+\definecolor{White}{HTML}{F4F5F0}
+
+\newcommand{\JSLogo}[1]{%
+  \begin{tikzpicture}[baseline=(current bounding box.center),scale=#1,transform shape]
+    \fill[black,rounded corners=2.2pt] (0,0) rectangle (1.12,0.62);
+    \draw[Lime!55,line width=0.6pt,rounded corners=2.2pt] (0,0) rectangle (1.12,0.62);
+    \node[inner sep=0pt,text=Lime,font=\sffamily\bfseries\fontsize{9}{9}\selectfont] at (0.18,0.31) {\{};
+    \node[inner sep=0pt,text=White,font=\sffamily\bfseries\fontsize{9}{9}\selectfont] at (0.56,0.31) {JS};
+    \node[inner sep=0pt,text=Lime,font=\sffamily\bfseries\fontsize{9}{9}\selectfont] at (0.94,0.31) {\}};
+    \node[anchor=west,inner sep=0pt,text=White,font=\sffamily\bfseries\fontsize{13}{13}\selectfont]
+      at (1.34,0.31) {JS \textcolor{Lime}{SPORT}};
+  \end{tikzpicture}%
+}
+
+\newcommand{\PageBg}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[White] (current page.south west) rectangle (current page.north east);
+    \fill[Navy] (current page.north west) rectangle ([yshift=-24mm]current page.north east);
+    \fill[Lime] ([xshift=18mm,yshift=-24mm]current page.north west) rectangle ++(23mm,1mm);
+    \node[anchor=west] at ([xshift=18mm,yshift=-12mm]current page.north west) {\JSLogo{0.72}};
+    \node[anchor=east,text=White,font=\sffamily\fontsize{7.5}{9}\selectfont]
+      at ([xshift=-18mm,yshift=-12mm]current page.north east) {PROPUESTA COMERCIAL \enspace / \enspace 001--2026};
+    \node[anchor=west,text=Slate,font=\sffamily\fontsize{7}{8}\selectfont]
+      at ([xshift=18mm,yshift=10mm]current page.south west) {JS SPORT \enspace\textcolor{Line}{|}\enspace Imagen profesional para organizaciones deportivas};
+    \node[anchor=east,text=Slate,font=\sffamily\fontsize{7}{8}\selectfont]
+      at ([xshift=-18mm,yshift=10mm]current page.south east) {\thepage\enspace/\enspace\pageref*{LastPage}};
+  \end{tikzpicture}%
+}
+
+\newcommand{\ContentStart}{\PageBg\par\vspace*{35mm}\noindent\hspace*{18mm}\begin{minipage}{174mm}}
+\newcommand{\ContentEnd}{\end{minipage}\newpage}
+\newcommand{\SectionTitle}[2]{%
+  {\color{Lime}\sffamily\bfseries\fontsize{8}{10}\selectfont #1}\par
+  \vspace{2mm}
+  {\color{Navy}\sffamily\bfseries\fontsize{23}{26}\selectfont #2}\par
+  \vspace{3mm}
+  {\color{Line}\rule{\linewidth}{0.5pt}}\par\vspace{6mm}
+}
+\newcommand{\Service}[4]{%
+  \begin{tikzpicture}
+    \node[anchor=north west,minimum width=16mm,minimum height=16mm,fill=Navy,text=Lime,
+      font=\sffamily\bfseries\fontsize{12}{12}\selectfont] at (0,0) {#1};
+  \end{tikzpicture}\hspace{2mm}%
+  \begin{minipage}[t]{145mm}
+    \vspace{-14mm}
+    {\sffamily\bfseries\fontsize{14}{16}\selectfont\color{Navy}#2}\hfill
+    {\sffamily\bfseries\fontsize{11}{13}\selectfont\color{Navy}#3}\par
+    \vspace{1mm}{\sffamily\fontsize{9}{12}\selectfont\color{Slate}#4}
+  \end{minipage}\par\vspace{5mm}
+}
+\newcommand{\Bullet}[1]{\item[\textcolor{Lime}{\rule{3.5pt}{3.5pt}}] #1}
+
+\begin{document}
+
+% PORTADA
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[Navy] (current page.south west) rectangle (current page.north east);
+  \fill[NavyTwo] ([xshift=122mm]current page.south west) rectangle (current page.north east);
+  \fill[Lime!5!Navy] ([xshift=168mm,yshift=-18mm]current page.north west) circle (55mm);
+  \draw[Lime!25,line width=0.7pt] ([xshift=168mm,yshift=-18mm]current page.north west) circle (41mm);
+  \fill[Lime] ([xshift=28mm,yshift=-29mm]current page.north west) rectangle ++(3mm,-25mm);
+  \node[anchor=north west] at ([xshift=38mm,yshift=-30mm]current page.north west) {\JSLogo{1.35}};
+  \node[anchor=west,text=Lime,font=\sffamily\bfseries\fontsize{8}{10}\selectfont]
+    at ([xshift=28mm,yshift=-92mm]current page.north west) {PROPUESTA COMERCIAL N.º 001--2026};
+  \node[anchor=north west,text=White,text width=150mm,align=left,
+    font=\sffamily\bfseries\fontsize{32}{35}\selectfont]
+    at ([xshift=28mm,yshift=-102mm]current page.north west)
+    {Imagen y presencia digital\\para Club Deportivo\\Pedal Sur};
+  \draw[Lime,line width=1.2pt] ([xshift=28mm,yshift=-212mm]current page.north west) -- ++(35mm,0);
+  \node[anchor=north west,text=White,text width=72mm,font=\sffamily\fontsize{9}{13}\selectfont]
+    at ([xshift=28mm,yshift=-223mm]current page.north west)
+    {\textcolor{Lime}{CLIENTE}\\[1mm]\textbf{Club Deportivo Pedal Sur}};
+  \node[anchor=north west,text=White,text width=72mm,font=\sffamily\fontsize{9}{13}\selectfont]
+    at ([xshift=105mm,yshift=-223mm]current page.north west)
+    {\textcolor{Lime}{FECHA}\\[1mm]\textbf{06 de agosto de 2026}};
+  \node[anchor=south west,text=White,font=\sffamily\fontsize{8}{10}\selectfont]
+    at ([xshift=28mm,yshift=22mm]current page.south west)
+    {Sitio web \enspace·\enspace Presentación institucional \enspace·\enspace Identidad digital};
+  \node[anchor=south east,text=Lime,font=\sffamily\bfseries\fontsize{8}{10}\selectfont]
+    at ([xshift=-18mm,yshift=22mm]current page.south east) {VIGENCIA: 15 DÍAS};
+\end{tikzpicture}
+\null\newpage
+
+% OBJETIVO
+\ContentStart
+\SectionTitle{01 / VISIÓN}{Una presencia a la altura del equipo}
+\begin{minipage}[t]{105mm}
+{\sffamily\fontsize{11}{16}\selectfont\color{Ink}
+Club Deportivo Pedal Sur busca fortalecer su presentación institucional y disponer de herramientas profesionales para comunicar su trayectoria, deportistas, resultados y proyecto deportivo.}\par
+\vspace{5mm}
+{\sffamily\fontsize{10}{15}\selectfont\color{Slate}
+JS Sport propone desarrollar una presencia digital coherente que permita al club centralizar su información y contar con material adecuado para presentarse ante empresas, potenciales auspiciadores, instituciones y nuevos integrantes.}\par
+\vspace{5mm}
+{\sffamily\fontsize{10}{15}\selectfont\color{Slate}
+El servicio entrega las herramientas necesarias para apoyar estas gestiones. No incluye ni garantiza la obtención de auspiciadores.}
+\end{minipage}\hfill
+\begin{minipage}[t]{56mm}
+\colorbox{Mist}{\begin{minipage}{48mm}
+\vspace{5mm}\hspace{5mm}\begin{minipage}{38mm}
+{\color{Lime}\sffamily\bfseries\fontsize{25}{25}\selectfont 01}\par
+\vspace{3mm}{\color{Navy}\sffamily\bfseries\fontsize{11}{14}\selectfont Un ecosistema\\digital coherente}\par
+\vspace{3mm}{\color{Slate}\sffamily\fontsize{8.5}{12}\selectfont Sitio, dossier e infraestructura trabajando como una sola identidad.}
+\vspace{5mm}
+\end{minipage}
+\end{minipage}}
+\end{minipage}
+\vspace{12mm}
+\begin{tikzpicture}
+  \foreach \x/\n/\t in {0/01/SITIO OFICIAL,57/02/DOSSIER,114/03/IDENTIDAD DIGITAL}{
+    \fill[Navy] (\x mm,0) rectangle ++(52mm,25mm);
+    \node[anchor=north west,text=Lime,font=\sffamily\bfseries\fontsize{8}{9}\selectfont] at (\x mm+4mm,21mm) {\n};
+    \node[anchor=south west,text=White,font=\sffamily\bfseries\fontsize{9}{10}\selectfont] at (\x mm+4mm,4mm) {\t};
+  }
+\end{tikzpicture}
+\ContentEnd
+
+% ALCANCE 1
+\ContentStart
+\SectionTitle{02 / ALCANCE}{Entregables principales}
+\Service{01}{Sitio web profesional}{\$520.000}{Diseño y desarrollo personalizado, adaptable a computadores, tablets y teléfonos.}
+\begin{minipage}[t]{80mm}
+\begin{itemize}[leftmargin=4mm,itemsep=1.7mm,topsep=0pt,labelsep=2mm]
+\Bullet{Página de inicio}
+\Bullet{Historia y presentación del club}
+\Bullet{Integrantes y deportistas}
+\Bullet{Resultados y principales logros}
+\Bullet{Calendario de competencias}
+\Bullet{Noticias y actualidad}
+\end{itemize}
+\end{minipage}\hfill
+\begin{minipage}[t]{80mm}
+\begin{itemize}[leftmargin=4mm,itemsep=1.7mm,topsep=0pt,labelsep=2mm]
+\Bullet{Patrocinadores y colaboradores}
+\Bullet{Prensa y apariciones en medios}
+\Bullet{Formulario y canales de contacto}
+\Bullet{Enlaces a redes sociales}
+\Bullet{Optimización móvil}
+\Bullet{Configuración y publicación}
+\end{itemize}
+\end{minipage}
+\vspace{8mm}
+{\color{Line}\rule{\linewidth}{0.5pt}}\par\vspace{7mm}
+\Service{02}{Presentación profesional para empresas}{\$190.000}{Documento institucional en PDF para presentar el club ante empresas y potenciales colaboradores.}
+\begin{minipage}[t]{80mm}
+\begin{itemize}[leftmargin=4mm,itemsep=1.7mm,topsep=0pt,labelsep=2mm]
+\Bullet{Presentación, historia e identidad}
+\Bullet{Integrantes destacados}
+\Bullet{Resultados deportivos}
+\Bullet{Proyecto y objetivos}
+\Bullet{Presencia y actividades}
+\end{itemize}
+\end{minipage}\hfill
+\begin{minipage}[t]{80mm}
+\begin{itemize}[leftmargin=4mm,itemsep=1.7mm,topsep=0pt,labelsep=2mm]
+\Bullet{Alternativas de colaboración}
+\Bullet{Exposición para marcas}
+\Bullet{Información de contacto}
+\Bullet{Diseño coherente con el sitio}
+\Bullet{Archivo listo para distribución digital}
+\end{itemize}
+\end{minipage}
+\ContentEnd
+
+% ALCANCE 2
+\ContentStart
+\SectionTitle{03 / SOPORTE}{Todo listo para comenzar}
+\Service{03}{Dominio y correo institucional}{INCLUIDO}{Configuración de la infraestructura básica para la presencia institucional del equipo.}
+\begin{itemize}[leftmargin=4mm,itemsep=2mm,topsep=1mm,labelsep=2mm]
+\Bullet{Configuración de dominio propio y vinculación con el sitio web}
+\Bullet{Configuración inicial de correo institucional y HTTPS}
+\Bullet{Asistencia durante la puesta en funcionamiento}
+\end{itemize}
+\vspace{3mm}
+\colorbox{Mist}{\begin{minipage}{164mm}\vspace{3mm}\hspace{4mm}\begin{minipage}{154mm}
+{\sffamily\fontsize{8}{11}\selectfont\color{Slate}\textbf{Importante:} los costos de dominio, correo, hosting u otros servicios de terceros serán informados previamente y pagados por el cliente.}
+\vspace{3mm}\end{minipage}\end{minipage}}
+\vspace{8mm}
+{\color{Line}\rule{\linewidth}{0.5pt}}\par\vspace{7mm}
+\Service{04}{Preparación inicial de contenido}{INCLUIDO}{Organización y adaptación del material proporcionado por el club.}
+\begin{itemize}[leftmargin=4mm,itemsep=2mm,topsep=1mm,labelsep=2mm]
+\Bullet{Revisión y organización de la información recibida}
+\Bullet{Edición básica de textos y selección de fotografías}
+\Bullet{Distribución y homogeneización de integrantes y resultados}
+\end{itemize}
+\vspace{9mm}
+\begin{tikzpicture}
+\fill[Navy] (0,0) rectangle (174mm,31mm);
+\node[anchor=west,text=Lime,font=\sffamily\bfseries\fontsize{8}{9}\selectfont] at (7mm,22mm) {PRINCIPIO DE TRABAJO};
+\node[anchor=west,text=White,text width=155mm,font=\sffamily\bfseries\fontsize{14}{17}\selectfont] at (7mm,10mm)
+{Ordenamos el contenido para que la historia deportiva se entienda, se recuerde y se pueda compartir.};
+\end{tikzpicture}
+\ContentEnd
+
+% INVERSIÓN
+\ContentStart
+\SectionTitle{04 / INVERSIÓN}{Una solución integral}
+\begin{tikzpicture}
+  \fill[Mist] (0,0) rectangle (174mm,12mm);
+  \node[anchor=west,text=Ink,font=\sffamily\bfseries\fontsize{8}{9}\selectfont] at (4mm,6mm) {CONCEPTO};
+  \node[anchor=east,text=Navy,font=\sffamily\bfseries\fontsize{8}{9}\selectfont] at (170mm,6mm) {VALOR};
+  \foreach \y/\lefttext/\righttext in {%-
+    -12/Sitio web profesional/\$520.000,
+    -24/Presentación profesional para empresas/\$190.000,
+    -36/Configuración de dominio y correo/Incluido,
+    -48/Preparación inicial de contenido/Incluido}{
+    \draw[Line,line width=.4pt] (0,\y mm+12mm) -- (174mm,\y mm+12mm);
+    \node[anchor=west,text=Ink,font=\sffamily\fontsize{9}{10}\selectfont] at (4mm,\y mm+6mm) {\lefttext};
+    \node[anchor=east,text=Navy,font=\sffamily\bfseries\fontsize{9}{10}\selectfont] at (170mm,\y mm+6mm) {\righttext};
+  }
+  \fill[Navy] (0,-60mm) rectangle (174mm,-48mm);
+  \node[anchor=west,text=White,font=\sffamily\bfseries\fontsize{9}{10}\selectfont] at (4mm,-54mm) {INVERSIÓN TOTAL};
+  \node[anchor=east,text=Lime,font=\sffamily\bfseries\fontsize{15}{15}\selectfont] at (170mm,-54mm) {\$710.000};
+\end{tikzpicture}
+\vspace{4mm}
+{\sffamily\fontsize{8}{10}\selectfont\color{Slate}Valores expresados en pesos chilenos. Servicios de terceros no incluidos.}\par
+\vspace{9mm}
+{\color{Lime}\sffamily\bfseries\fontsize{8}{10}\selectfont FORMA DE PAGO}\par
+\vspace{4mm}
+\begin{tikzpicture}
+  \fill[Mist] (0,0) rectangle (83mm,38mm);
+  \fill[Mist] (91mm,0) rectangle (174mm,38mm);
+  \fill[Lime] (0,0) rectangle (3mm,38mm);
+  \fill[Lime] (91mm,0) rectangle (94mm,38mm);
+  \node[anchor=north west,text=Navy,font=\sffamily\bfseries\fontsize{22}{22}\selectfont] at (9mm,32mm) {50\%};
+  \node[anchor=west,text=Ink,font=\sffamily\bfseries\fontsize{10}{12}\selectfont] at (9mm,15mm) {Inicio del proyecto};
+  \node[anchor=west,text=Slate,font=\sffamily\fontsize{9}{11}\selectfont] at (9mm,7mm) {\$355.000};
+  \node[anchor=north west,text=Navy,font=\sffamily\bfseries\fontsize{22}{22}\selectfont] at (100mm,32mm) {50\%};
+  \node[anchor=west,text=Ink,font=\sffamily\bfseries\fontsize{10}{12}\selectfont] at (100mm,15mm) {Aprobación y publicación};
+  \node[anchor=west,text=Slate,font=\sffamily\fontsize{9}{11}\selectfont] at (100mm,7mm) {\$355.000};
+\end{tikzpicture}
+\vspace{7mm}
+\begin{tikzpicture}
+  \draw[Line,line width=.6pt,rounded corners=2mm] (0,0) rectangle (174mm,25mm);
+  \node[anchor=west,text=Navy,font=\sffamily\bfseries\fontsize{9}{11}\selectfont] at (7mm,17mm) {Inicio confirmado};
+  \node[anchor=west,text=Slate,text width=158mm,font=\sffamily\fontsize{8.5}{11}\selectfont] at (7mm,7mm) {El desarrollo comenzará una vez confirmado el primer pago y recibido el material inicial necesario.};
+\end{tikzpicture}
+\ContentEnd
+
+% PROCESO
+\ContentStart
+\SectionTitle{05 / PLAN}{Proceso y tiempos}
+\begin{tikzpicture}
+\foreach \y/\n/\t in {0/01/Reunión inicial,-30/02/Recopilación,-60/03/Diseño y desarrollo,-90/04/Revisión,-120/05/Publicación y entrega}{
+  \fill[Navy] (0,\y mm) circle (6mm);
+  \node[text=Lime,font=\sffamily\bfseries\fontsize{8}{8}\selectfont] at (0,\y mm) {\n};
+  \node[anchor=west,text=Navy,font=\sffamily\bfseries\fontsize{11}{12}\selectfont] at (12mm,\y mm+3mm) {\t};
+}
+\node[anchor=west,text=Slate,text width=130mm,font=\sffamily\fontsize{8.5}{11}\selectfont] at (12mm,-5mm) {Conocemos al equipo, sus objetivos y necesidades.};
+\node[anchor=west,text=Slate,text width=130mm,font=\sffamily\fontsize{8.5}{11}\selectfont] at (12mm,-35mm) {Organizamos fotografías, historia, integrantes y resultados.};
+\node[anchor=west,text=Slate,text width=130mm,font=\sffamily\fontsize{8.5}{11}\selectfont] at (12mm,-65mm) {Construimos la propuesta visual, el sitio y los documentos.};
+\node[anchor=west,text=Slate,text width=130mm,font=\sffamily\fontsize{8.5}{11}\selectfont] at (12mm,-95mm) {El cliente revisa el material y entrega sus observaciones.};
+\node[anchor=west,text=Slate,text width=130mm,font=\sffamily\fontsize{8.5}{11}\selectfont] at (12mm,-125mm) {Ajustamos, publicamos y entregamos el material terminado.};
+\draw[Line,line width=1pt] (0,-6mm) -- (0,-114mm);
+\end{tikzpicture}
+\vspace{7mm}
+\begin{tikzpicture}
+\fill[Lime] (0,0) rectangle (174mm,27mm);
+\node[anchor=west,text=Navy,font=\sffamily\bfseries\fontsize{8}{9}\selectfont] at (7mm,18mm) {PLAZO ESTIMADO};
+\node[anchor=west,text=Navy,font=\sffamily\bfseries\fontsize{18}{20}\selectfont] at (7mm,7mm) {3 a 5 semanas};
+\node[anchor=east,text=Navy,text width=95mm,align=right,font=\sffamily\fontsize{8}{11}\selectfont] at (167mm,12mm)
+{Desde la recepción del material. El plazo puede variar según la velocidad de entrega y observaciones del cliente.};
+\end{tikzpicture}
+\ContentEnd
+
+% CONDICIONES
+\ContentStart
+\SectionTitle{06 / ACUERDOS}{Condiciones claras}
+\begin{minipage}[t]{80mm}
+{\color{Navy}\sffamily\bfseries\fontsize{13}{15}\selectfont Revisiones}\par\vspace{3mm}
+{\color{Slate}\sffamily\fontsize{9}{13}\selectfont
+La propuesta considera hasta \textbf{dos rondas generales de modificaciones}. Las correcciones menores necesarias están incluidas. Cambios sustanciales de alcance, una vez aprobado el diseño, podrán cotizarse por separado.}
+\vspace{8mm}
+{\color{Navy}\sffamily\bfseries\fontsize{13}{15}\selectfont Responsabilidades del cliente}\par\vspace{3mm}
+{\color{Slate}\sffamily\fontsize{9}{13}\selectfont
+Para cumplir los plazos, el cliente facilitará logotipo, historia, integrantes, resultados, calendario, fotografías, patrocinadores y datos de contacto. JS Sport apoyará su organización y presentación.}
+\end{minipage}\hfill
+\begin{minipage}[t]{80mm}
+{\color{Navy}\sffamily\bfseries\fontsize{13}{15}\selectfont Servicios opcionales}\par\vspace{3mm}
+\begin{itemize}[leftmargin=4mm,itemsep=1.8mm,topsep=0pt,labelsep=2mm]
+\Bullet{Fotografía deportiva profesional}
+\Bullet{Contenido para redes sociales}
+\Bullet{Newsletter y cobertura de resultados}
+\Bullet{Actualización de calendario e integrantes}
+\Bullet{Nuevas secciones y documentos}
+\Bullet{Mantención y actualización del sitio}
+\end{itemize}
+\vspace{4mm}
+{\color{Slate}\sffamily\fontsize{8}{11}\selectfont Cuando sea necesario contratar especialistas externos, su alcance y valor serán informados y aprobados previamente.}
+\end{minipage}
+\vspace{12mm}
+\begin{tikzpicture}
+\fill[Navy] (0,0) rectangle (174mm,42mm);
+\node[anchor=north west,text=Lime,font=\sffamily\bfseries\fontsize{8}{9}\selectfont] at (7mm,34mm) {RESULTADO};
+\node[anchor=north west,text=White,text width=155mm,font=\sffamily\bfseries\fontsize{16}{19}\selectfont] at (7mm,25mm)
+{Un sitio oficial. Una presentación institucional. Una identidad digital organizada.};
+\end{tikzpicture}
+\ContentEnd
+
+% CIERRE
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[Navy] (current page.south west) rectangle (current page.north east);
+  \fill[Lime!5!Navy] ([xshift=168mm,yshift=-18mm]current page.north west) circle (55mm);
+  \draw[Lime!25,line width=0.7pt] ([xshift=168mm,yshift=-18mm]current page.north west) circle (41mm);
+  \fill[Lime] ([xshift=28mm,yshift=-29mm]current page.north west) rectangle ++(3mm,-25mm);
+  \node[anchor=north west] at ([xshift=38mm,yshift=-30mm]current page.north west) {\JSLogo{1.35}};
+  \node[anchor=north west,text=Lime,font=\sffamily\bfseries\fontsize{8}{9}\selectfont]
+    at ([xshift=28mm,yshift=-103mm]current page.north west) {LA BASE PROFESIONAL PARA DAR EL SIGUIENTE PASO};
+  \node[anchor=north west,text=White,text width=150mm,font=\sffamily\bfseries\fontsize{30}{34}\selectfont]
+    at ([xshift=28mm,yshift=-115mm]current page.north west)
+    {El talento ya está.\\Hagamos que también\\se vea.};
+  \draw[Lime,line width=1.2pt] ([xshift=28mm,yshift=-215mm]current page.north west) -- ++(35mm,0);
+  \node[anchor=north west,text=White,text width=150mm,font=\sffamily\fontsize{9}{14}\selectfont]
+    at ([xshift=28mm,yshift=-225mm]current page.north west)
+    {\textcolor{Lime}{CONTACTO}\\[2mm]
+    correo@jssport.cl \enspace·\enspace +56 9 XXXX XXXX \enspace·\enspace www.jssport.cl};
+  \node[anchor=south west,text=White,font=\sffamily\fontsize{8}{10}\selectfont]
+    at ([xshift=28mm,yshift=22mm]current page.south west)
+    {JS SPORT \enspace / \enspace Imagen profesional para organizaciones deportivas};
+  \node[anchor=south east,text=Lime,font=\sffamily\bfseries\fontsize{8}{10}\selectfont]
+    at ([xshift=-18mm,yshift=22mm]current page.south east) {PROPUESTA 001--2026};
+\end{tikzpicture}
+\null
+
+\end{document}
+
+
+
+
