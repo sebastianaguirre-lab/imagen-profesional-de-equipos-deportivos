@@ -1,6 +1,6 @@
 const CONTACT = {
-  email: "sebastian.aguirre@ug.uchile.cl",
-  whatsapp: "56994226803",
+  email: "contacto.jssport@gmail.com",
+  whatsapp: "56972617614",
 };
 
 const navbar = document.querySelector("#navbar");
@@ -22,7 +22,7 @@ function configureContact() {
     CONTACT.whatsapp +
     "?text=" +
     encodeURIComponent(
-      "Hola Sebastián, me interesa conocer el servicio integral de imagen para equipos deportivos.",
+      "Hola, me interesa conocer el servicio integral de imagen para equipos deportivos.",
     );
   whatsappLink.target = "_blank";
   whatsappLink.rel = "noopener noreferrer";
