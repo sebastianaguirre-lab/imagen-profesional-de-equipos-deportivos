@@ -164,12 +164,6 @@ h2 { margin: 0; font: 800 clamp(2.5rem, 5vw, 4.7rem)/.98 "Barlow Condensed", san
 .impact-labels span:nth-child(2) { text-align: center; }
 .impact-labels span:last-child { text-align: right; }
 .impact-note { margin: 1.15rem 0 0; color: #747b73; font-size: .68rem; }
-.pricing-section { padding: 125px 0; border-top: 1px solid var(--linea); border-bottom: 1px solid var(--linea); background: #0d100d; }
-.pricing-content { max-width: 900px; }
-.pricing-content h2 { max-width: 820px; }
-.pricing-content h2 span { color: var(--verde); white-space: nowrap; }
-.pricing-content > p:not(.section-kicker) { max-width: 790px; margin: 1.6rem 0 0; color: var(--gris); font-size: 1rem; }
-.pricing-content .btn { margin-top: 2rem; }
 .contact-section { background: var(--negro); }
 .contact-panel { display: grid; grid-template-columns: .8fr 1.2fr; gap: 4rem; padding: clamp(1.5rem, 5vw, 4.5rem); border: 1px solid var(--linea); border-radius: 24px; background: radial-gradient(circle at 0 0, rgba(77,226,255,.14), transparent 38%), var(--negro-suave); }
 .contact-copy p:not(.section-kicker) { margin: 1.3rem 0 2rem; color: var(--gris); }
@@ -204,7 +198,6 @@ footer { padding: 70px 0 25px; border-top: 1px solid var(--linea); background: #
 }
 
 @media (max-width: 991.98px) {
-  .pricing-section { padding: 90px 0; }
   .section-intro, .section-block, .process-section, .case-section, .deliverables-section, .faq-section, .contact-section { padding: 80px 0; }
   .split-heading, .case-header, .contact-panel { grid-template-columns: 1fr; gap: 1.5rem; }
   .case-header > p { margin-left: 0; }
