@@ -253,7 +253,8 @@ footer { padding: 70px 0 25px; border-top: 1px solid var(--linea); background: #
   h2 { font-size: 2.5rem; }
   .service-card { min-height: 0; }
   .case-slide img { height: 260px; }
-  .case-browser-preview, .case-media-preview { height: 260px; }
+  .case-browser-preview, .case-media-preview { height: calc(50.56vw + 28px); }
+  .case-browser-preview a { flex: 1; width: 100%; aspect-ratio: auto; }
   .case-browser-preview img { height: 218px; }
   .case-slide > div { padding: 1.5rem 1.5rem 4rem; }
   .case-slide h3 { font-size: 2rem; }
